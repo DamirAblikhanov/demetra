@@ -20,7 +20,7 @@ export class UsersController {
       throw new UnauthorizedException({ error: `This email already exists!` });
     }
 
-    const createdUser = await this.usersService.createUser(createUserDto);
+    const createdUser = await this.usersService.createNewUser(createUserDto);
     return createdUser;
   }
 
