@@ -25,7 +25,7 @@ export class UsersService {
     return instanceToPlain(user);
   }
 
-  async findUserByEmail(email: string) {
+  async findUserByEmail(email: string): Promise<User> {
     return await this.usersRepository.findOneBy({ email });
   }
 

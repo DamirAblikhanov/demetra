@@ -9,7 +9,7 @@ export class UsersController {
 
   @Get()
   async getAllUsers() {
-    return this.usersService.getAllUsers();
+    return await this.usersService.getAllUsers();
   }
 
   @Post()
