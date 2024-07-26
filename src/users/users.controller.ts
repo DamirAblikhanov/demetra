@@ -37,7 +37,7 @@ export class UsersController {
     return user;
   }
 
-  @Delete(':_id')
+  @Delete(':id')
   async deleteUserById(@Param('id') id: number) {
     if (isNaN(id) || !id.toString().trim()) {
       throw new BadRequestException({ error: 'Invalid ID format' });
